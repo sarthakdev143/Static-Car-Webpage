@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-variant: small-caps;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.backgroundDiv {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: -1;
+}
+
+.Background {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+nav {
+    z-index: 999;
+    width: 100%;
+    height: 10%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
+    ul {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        box-shadow: 0 0 1vw rgb(0, 0, 0, 0.5);
+
+        .navbarContent {
+            margin: auto;
+            font-size: 1vw;
+            color: black;
+            text-decoration: none;
+            padding: 0.5vw 1.5vw;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            transition: all ease 0.1s;
+
+            &:hover {
+                background-color: rgb(238, 238, 238);
+            }
+
+            &:active {
+                background: #bfbfbf;
+            }
+        }
+
+        .logo-parent {
+            background-color: #fff;
+            width: fit-content;
+            overflow: hidden;
+            height: 9.5vw;
+            border-radius: 0% 0% 50% 50% / 0% 90% 100% 100%;
+            cursor: pointer;
+        }
+
+        .logo {
+            width: 5.5vw;
+            background-color: #fff;
+            box-sizing: content-box;
+            padding: 2vw;
+            margin-top: -1vw;
+        }
+    }
+}
+
+/* Content Div Start */
+
+.content {
+    width: 100%;
+    height: auto;
+    padding: 3vw;
+    padding-top: 10vw;
+    margin-top: -17vw;
+
+    /* Top Heading */
+    .heading {
+        margin-top: -2vw;
+        margin-left: 2vw;
+        align-content: center;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        color: #fff;
+        width: 72%;
+        padding: 2vw;
+        font-size: 5vw;
+        font-weight: 500;
+        font-variant: normal;
+        font-family: 'Courier New', Courier, monospace;
+        transition: all ease 0.3s;
+
+        &:hover {
+            background-color: #0000005b;
+            border-radius: 2vw;
+            backdrop-filter: blur(0.5vw);
+        }
+    }
+}
+
+.loginButton {
+    cursor: pointer;
+    position: absolute;
+    bottom: 3vw;
+    left: 3vw;
+    font-size: 1.1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 8vw;
+    height: 4vw;
+    border-radius: 1vw;
+    border: 0.4vw solid var(--color);
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 1vw rgb(0, 0, 0, 0.5);
+    transition: all ease 0.3s;
+
+    .line {
+        padding: 1vw;
+        width: 107%;
+        color: var(--color);
+        font-weight: 600;
+        margin-left: -0.2vw;
+        transition: all ease 0.3s;
+    }
+
+    .line1 {
+        margin-top: 3.5vw;
+    }
+
+    .line2 {
+        font-size: larger;
+    }
+
+    &:hover {
+        background: var(--color);
+        border: 0.4vw solid #ededed;
+
+        .line {
+            color: #fff;
+        }
+
+        .line1 {
+            margin-top: -3.3vw;
+        }
+    }
+}
+
+.start-engine {
+    position: absolute;
+    cursor: pointer;
+    right: 3vw;
+    bottom: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    outline: none;
+    z-index: 1;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background-color: #ededed;
+    box-shadow: 0 0 1vw rgb(0, 0, 0, 0.5);
+    border: 0.5vw solid var(--color);
+    color: var(--color);
+    transition: all ease 0.4s;
+    overflow: hidden;
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all ease 0.3s;
+    }
+
+    .keyIcon {
+        transition: all ease 0.3s;
+        width: 2.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        color: #ededed;
+    }
+
+    &:hover {
+        background-color: var(--color);
+        color: #ededed;
+        border: 0.5vw solid #ededed;
+
+        .text {
+            margin-top: -100%;
+        }
+
+        .keyIcon {
+            margin-top: -63%;
+        }
+    }
+
+    &:active {
+        transform: scale(0.9);
+        transition: all ease 0.1s;
+    }
+}
